@@ -1,0 +1,47 @@
+@use "variables";
+
+@mixin responsive-font($large-desktop-size, $mobile-size) {
+    font-size: $large-desktop-size;
+
+    @media (max-width: variables.$breakpoint-mobile) {
+        font-size: $mobile-size;
+    }
+}
+
+@mixin responsive-padding($large-desktop-padding, $tablet-padding, $mobile-padding) {
+    padding: $large-desktop-padding;
+
+    @media (max-width: variables.$breakpoint-desktop) {
+        padding: $tablet-padding;
+    }
+
+    @media (max-width: variables.$breakpoint-mobile) {
+        padding: $mobile-padding;
+    }
+}
+
+@mixin responsive-element-width($large-desktop-width, $desktop-width, $tablet-width, $mobile-width: null) {
+    & {
+        width: $large-desktop-width;
+    }
+
+    @media (max-width: variables.$breakpoint-desktop) {
+        width: $desktop-width;
+    }
+
+    @media (max-width: variables.$breakpoint-tablet) {
+        width: $tablet-width;
+    }
+
+    @if $mobile-width !=null {
+        @media (max-width: variables.$breakpoint-mobile) {
+            @if type-of($mobile-width)=="number" or type-of($mobile-width)=="percentage" {
+                width: $mobile-width;
+            }
+
+            @else if $mobile-width ==none {
+                display: none;
+            }
+        }
+    }
+}
