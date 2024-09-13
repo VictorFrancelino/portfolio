@@ -47,20 +47,6 @@ function activateNavLink() {
     });
 }
 
-// Adds smooth scrolling effect when clicking a navigation link
-navLinks.forEach(link => {
-    link.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevent default link behavior
-
-        const targetId = link.getAttribute("href").substring(1); // Remove the "#" from the href
-        const targetSection = document.getElementById(targetId);
-
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: "smooth" });
-        }
-    });
-});
-
 document.addEventListener("scroll", () => {
     checkFooterVisibility() // Check footer visibility with each scroll
     activateNavLink() // Update the state of navigation links with each scroll
