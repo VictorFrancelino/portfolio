@@ -465,11 +465,10 @@ main {
                         }
                     }
 
-                    @include mixins.responsive-element-width(400px, 40%, 45%);
+                    @include mixins.responsive-element-width(400px, 400px, 400px);
 
                     @media (max-width: variables.$breakpoint-mobile) {
                         width: 100%;
-                        height: 150px;
                     }
                 }
             }
