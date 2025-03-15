@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Audiowide;
+  src: url("./assets/fonts/Audiowide-Regular.ttf");
+}
+
+@font-face {
+  font-family: ShareTech;
+  src: url("./assets/fonts/ShareTech-Regular.ttf");
+}
+
+@theme {
+  --font-audiowide: Audiowide, "sans-serif";
+  --font-sharetech: ShareTech, "sans-serif";
+  --color-pink: #F20574;
+  --color-yellow: #FCEE0A;
+  --color-light-blue: #07B0F2;
+  --color-white: #F8F9FA;
+  --color-black: #111111;
+
+  --drop-shadow-pink: 0px 0px 25px #F20574;
+}
+
+body {
+  background-color: var(--color-black);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-yellow);
+  border-radius: 20px;
+}
