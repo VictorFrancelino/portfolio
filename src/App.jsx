@@ -1,18 +1,17 @@
-import './App.css'
-import Hero from "./components/hero"
-import AboutMe from './components/aboutMe'
-import ParticlesComponent from "./components/particles"
-import Education from "./components/education"
-import Projects from "./components/projects"
-import Contacts from './components/contacts'
-import Footer from "./components/footer"
+import ParticlesComponent from "./components/particles";
+import Home from "./sections/home";
+import AboutMe from "./sections/aboutMe";
+import Education from "./sections/education";
+import Projects from "./sections/projects";
+import Contacts from "./sections/contacts";
+import Footer from "./sections/footer";
 
 function App() {
   return (
     <>
       <ParticlesComponent />
       <main>
-        <Hero />
+        <Home />
         <AboutMe />
         <Education />
         <Projects />
@@ -20,7 +19,7 @@ function App() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

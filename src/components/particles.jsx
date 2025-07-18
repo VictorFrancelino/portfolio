@@ -32,22 +32,22 @@ const ParticlesComponent = (props) => {
         events: {
           onHover: {
             enable: true,
-            mode: 'repulse',
+            mode: "repulse",
           },
         },
         modes: {
           repulse: {
-            distance: 100, // Distância de repulsão ao passar o mouse
+            distance: 100,
             duration: 0.4,
           },
         },
       },
       particles: {
         color: {
-          value: "#f20574"
+          value: "#f20574",
         },
         links: {
-          color: "#f20574", // Cor rosa para as linhas
+          color: "#f20574",
           distance: 150,
           enable: true,
           opacity: 0.4,
@@ -57,17 +57,17 @@ const ParticlesComponent = (props) => {
           value: 80,
           density: {
             enable: true,
-            value_area: 800
-          }
+            value_area: 800,
+          },
         },
         shape: {
           type: "circle",
           stroke: {
             width: 0,
-            color: "#f20574"
+            color: "#f20574",
           },
           polygon: {
-            nb_sides: 3
+            nb_sides: 3,
           },
         },
         opacity: {
@@ -77,8 +77,8 @@ const ParticlesComponent = (props) => {
             enable: false,
             speed: 1,
             opacity_min: 0.1,
-            sync: false
-          }
+            sync: false,
+          },
         },
         size: {
           value: 2,
@@ -87,15 +87,15 @@ const ParticlesComponent = (props) => {
             enable: false,
             speed: 40,
             size_min: 0.1,
-            sync: false
-          }
+            sync: false,
+          },
         },
         line_linked: {
           enable: true,
           distance: 150,
           color: "#f20574",
           opacity: 0.4,
-          width: 1
+          width: 1,
         },
         move: {
           enable: true,
@@ -108,16 +108,16 @@ const ParticlesComponent = (props) => {
           attract: {
             enable: false,
             rotateX: 600,
-            rotateY: 1200
-          }
-        }
+            rotateY: 1200,
+          },
+        },
       },
       retina_detect: true,
     }),
-    [],
+    []
   );
 
-  return <Particles init={particlesLoaded} options={options} />; 
+  return <Particles init={particlesLoaded} options={options} />;
 };
 
 export default ParticlesComponent;

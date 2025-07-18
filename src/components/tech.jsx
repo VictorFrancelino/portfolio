@@ -1,49 +1,42 @@
-import React from "react"
+import React from "react";
 
 function Tech({ icon, text }) {
   const defaultIconClasses = `
-    text-[#F8F9FA] 
-    group-hover:text-pink 
-    group-hover:-translate-y-5 
-    transition 
-    duration-700 
-    ease-in-out 
-    text-8xl
+    text-white
+    text-8xl sm:text-9xl lg:text-[150px]
     
-    sm:text-9xl
-    lg:text-[150px]
-  `
+    transition duration-700 ease-in-out 
+    group-hover:text-pink group-hover:-translate-y-5 
+  `;
 
   const clonedIcon = React.cloneElement(icon, {
-    className: icon.props.className ? 
-      icon.props.className + " " + defaultIconClasses 
+    className: icon.props.className
+      ? icon.props.className + " " + defaultIconClasses
       : defaultIconClasses,
     "aria-label": text,
-  })
+  });
 
-  return(
+  return (
     <div className="flex flex-col items-center">
       <div className="group relative inline-flex">
         {clonedIcon}
-        <span className="
+        <span
+          className="
             w-full
             text-center
-          text-pink 
-            font-sharetech 
-            absolute 
-            -z-10 
-            bottom-0
-            opacity-0 
-            group-hover:opacity-100 
-            transition 
-            duration-700 
-            ease-in-out
-        ">
+      
+            absolute -z-10 bottom-0
+
+            transition duration-700 ease-in-out
+            
+            opacity-0 group-hover:opacity-100 
+          "
+        >
           {text}
         </span>
       </div>
     </div>
-  )
+  );
 }
 
-export default Tech
+export default Tech;

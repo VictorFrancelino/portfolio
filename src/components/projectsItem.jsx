@@ -1,52 +1,38 @@
-function ProjectsItem() {
-  return(
-    <article 
-      className="
-        group
-        w-[300px]
-        h-[200px]
-        font-sharetech 
-        flex 
-        justify-center 
-        items-center 
-        bg-black 
-        rounded-xl 
-        border-2 
-        border-white
-        transition duration-700
-        ease-in-out
-        hover:border-pink
-      "
-    >
-      <div 
+import GlitchButton from "./glitchButton";
+import { LuCodeXml, LuSquareArrowOutUpRight } from "react-icons/lu";
+
+function ProjectsItem({ name, description, url, alt, preview, repoLink }) {
+  return (
+    <div className="w-[500px]">
+      <h3 className="text-xl mb-2">{name}</h3>
+      <img
         className="
-          w-full 
-          h-[50px] 
-          bg-white 
-          flex 
-          justify-center 
-          items-center 
-          transition
-          duration-700
-          ease-in-out
-          group-hover:bg-pink
+          aspect-video
+          rounded-xl
         "
-      >
-        <p 
-          className="
-            text-black 
-            text-lg 
-            transition-all
-            duration-700 
-            ease-in-out
-            group-hover:tracking-widest 
-          "
-        >
-          Em breve
-        </p>
+        src={preview}
+        alt={alt}
+      />
+      <p
+        className="mt-2 text-lg indent-4"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
+      <div className="flex space-x-5 mt-5">
+        {repoLink ? (
+          <GlitchButton
+            icon={<LuCodeXml />}
+            href={repoLink}
+            ariaLabel={"Visitar repositório desse projeto no GitHub."}
+          />
+        ) : null}
+        <GlitchButton
+          icon={<LuSquareArrowOutUpRight />}
+          href={url}
+          ariaLabel={"Visitar o site desse projeto."}
+        />
       </div>
-    </article>
-  )
+    </div>
+  );
 }
 
-export default ProjectsItem
+export default ProjectsItem;

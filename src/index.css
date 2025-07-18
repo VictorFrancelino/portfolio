@@ -13,17 +13,38 @@
 @theme {
   --font-audiowide: Audiowide, "sans-serif";
   --font-sharetech: ShareTech, "sans-serif";
-  --color-pink: #F20574;
-  --color-yellow: #FCEE0A;
-  --color-light-blue: #07B0F2;
-  --color-white: #F8F9FA;
+  --color-pink: #f20574;
+  --color-yellow: #fcee0a;
+  --color-light-blue: #07b0f2;
+  --color-white: #f8f9fa;
   --color-black: #111111;
 
-  --drop-shadow-pink: 0px 0px 25px #F20574;
+  --drop-shadow-pink: 0px 0px 25px #f20574;
 }
 
 body {
   background-color: var(--color-black);
+}
+
+h1 {
+  font-family: "Audiowide", "sans-serif";
+  color: var(--color-pink);
+}
+
+h2 {
+  font-family: "Audiowide", "sans-serif";
+  color: var(--color-light-blue);
+}
+
+h3,
+span {
+  font-family: "ShareTech", "sans-serif";
+  color: var(--color-yellow);
+}
+
+p {
+  font-family: "ShareTech", "sans-serif";
+  color: var(--color-white);
 }
 
 ::-webkit-scrollbar {
