@@ -36,6 +36,8 @@ function Hero() {
       <img
         src={heroImage}
         alt="Foto de Victor Francelino"
+        loading="eager"
+        fetchPriority="high"
         className="
           rounded-full 
           object-cover object-center
@@ -49,7 +51,7 @@ function Hero() {
         <h1 className="text-4xl text-center sm:text-5xl md:text-6xl lg:text-7xl">
           Victor Francelino
         </h1>
-        <h2 className="text-2xl text-center" role="heading">
+        <h2 className="text-lg md:text-2xl text-center" role="heading">
           Desenvolvedor Front-End
         </h2>
       </div>

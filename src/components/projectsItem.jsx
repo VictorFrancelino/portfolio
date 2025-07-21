@@ -3,13 +3,10 @@ import { LuCodeXml, LuSquareArrowOutUpRight } from "react-icons/lu";
 
 function ProjectsItem({ name, description, url, alt, preview, repoLink }) {
   return (
-    <div className="w-[500px]">
+    <article className="block max-w-sm">
       <h3 className="text-xl mb-2">{name}</h3>
       <img
-        className="
-          aspect-video
-          rounded-xl
-        "
+        className="w-full object-cover aspect-video rounded-xl"
         src={preview}
         alt={alt}
       />
@@ -31,7 +28,7 @@ function ProjectsItem({ name, description, url, alt, preview, repoLink }) {
           ariaLabel={"Visitar o site desse projeto."}
         />
       </div>
-    </div>
+    </article>
   );
 }
 

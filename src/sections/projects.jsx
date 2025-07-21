@@ -28,6 +28,7 @@ function Projects() {
       <div className="w-full flex flex-wrap justify-center gap-10">
         {projectsList.map((project) => (
           <ProjectsItem
+            key={project.name}
             name={project.name}
             description={project.description}
             url={project.url}
