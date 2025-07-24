@@ -3,11 +3,13 @@
 @font-face {
   font-family: Audiowide;
   src: url("./assets/fonts/Audiowide-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: ShareTech;
   src: url("./assets/fonts/ShareTech-Regular.ttf");
+  font-display: swap;
 }
 
 @theme {

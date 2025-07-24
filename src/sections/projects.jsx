@@ -1,5 +1,5 @@
 import ProjectsItem from "../components/projectsItem";
-import duardoEditorPreview from "../assets/imgs/duardo-editor-preview.png";
+import duardoEditorPreview from "../assets/imgs/duardo-editor-preview.webp";
 
 function Projects() {
   const projectsList = [
