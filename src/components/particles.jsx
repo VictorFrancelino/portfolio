@@ -1,21 +1,13 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { loadSlim } from "@tsparticles/slim";
 
-const ParticlesComponent = (props) => {
-  const [init, setInit] = useState(false);
-
+const ParticlesComponent = () => {
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
     });
   }, []);
-
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
 
   const options = useMemo(
     () => ({
@@ -27,7 +19,7 @@ const ParticlesComponent = (props) => {
           value: "transparent",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 60,
       interactivity: {
         events: {
           onHover: {
@@ -81,7 +73,7 @@ const ParticlesComponent = (props) => {
           },
         },
         size: {
-          value: 2,
+          value: { min: 1, max: 3 },
           random: true,
           anim: {
             enable: false,
@@ -89,13 +81,6 @@ const ParticlesComponent = (props) => {
             size_min: 0.1,
             sync: false,
           },
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#f20574",
-          opacity: 0.4,
-          width: 1,
         },
         move: {
           enable: true,
@@ -112,12 +97,12 @@ const ParticlesComponent = (props) => {
           },
         },
       },
-      retina_detect: true,
+      detectRetina: true,
     }),
     []
   );
 
-  return <Particles init={particlesLoaded} options={options} />;
+  return <Particles id="tsparticles" options={options} />;
 };
 
 export default ParticlesComponent;

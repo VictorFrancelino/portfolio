@@ -35,6 +35,8 @@ function Hero() {
     >
       <img
         src={heroImage}
+        width={450}
+        height={450}
         alt="Foto de Victor Francelino"
         loading="eager"
         fetchPriority="high"
