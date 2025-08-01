@@ -1,26 +1,26 @@
+import { BiLogoGmail, BiLogoLinkedin, BiLogoGithub } from "react-icons/bi";
 import heroImage from "../assets/imgs/hero.jpg";
 import GlitchButton from "../components/glitchButton";
-import { BiLogoGmail, BiLogoLinkedin, BiLogoGithub } from "react-icons/bi";
+
+const iconsList = [
+  {
+    icon: <BiLogoGmail size={25} aria-label="true" />,
+    link: "mailto:victor.francelino10@gmail.com",
+    ariaLabel: "Enviar um email para Victor Francelino.",
+  },
+  {
+    icon: <BiLogoLinkedin size={25} aria-label="true" />,
+    link: "https://www.linkedin.com/in/victorfrancelino",
+    ariaLabel: "LinkedIn de Victor Francelino",
+  },
+  {
+    icon: <BiLogoGithub size={25} aria-label="true" />,
+    link: "https://github.com/VictorFrancelino",
+    ariaLabel: "GitHub de Victor Francelino",
+  },
+];
 
 function Hero() {
-  const icons = [
-    {
-      icon: <BiLogoGmail size={25} aria-hidden="true" />,
-      link: "mailto:victor.francelino10@gmail.com",
-      ariaLabel: "Enviar um email para Victor Francelino.",
-    },
-    {
-      icon: <BiLogoLinkedin size={25} aria-hidden="true" />,
-      link: "https://www.linkedin.com/in/victorfrancelino",
-      ariaLabel: "LinkedIn de Victor Francelino",
-    },
-    {
-      icon: <BiLogoGithub size={25} aria-hidden="true" />,
-      link: "https://github.com/VictorFrancelino",
-      ariaLabel: "GitHub de Victor Francelino",
-    },
-  ];
-
   return (
     <section
       id="hero"
@@ -59,7 +59,7 @@ function Hero() {
       </div>
 
       <div id="links" className="flex space-x-10">
-        {icons.map((item, index) => (
+        {iconsList.map((item, index) => (
           <GlitchButton
             key={index}
             icon={item.icon}

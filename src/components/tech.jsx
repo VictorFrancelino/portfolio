@@ -4,7 +4,6 @@ function Tech({ icon, text }) {
   const defaultIconClasses = `
     text-white
     text-8xl sm:text-9xl lg:text-[150px]
-    
     transition duration-700 ease-in-out 
     group-hover:text-pink group-hover:-translate-y-5 
   `;
@@ -24,11 +23,8 @@ function Tech({ icon, text }) {
           className="
             w-full
             text-center
-      
             absolute -z-10 bottom-0
-
             transition duration-700 ease-in-out
-            
             opacity-0 group-hover:opacity-100 
           "
         >

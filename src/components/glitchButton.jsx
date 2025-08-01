@@ -18,10 +18,8 @@ function GlitchButton({ icon, href, ariaLabel }) {
         w-[50px] h-[50px] 
         bg-white rounded-xl 
         flex justify-center items-center
-        
         transition-all
         duration-700 ease-in-out
-
         hover:bg-pink
         hover:drop-shadow-(--drop-shadow-pink) 
       "

@@ -1,24 +1,24 @@
-import ContactsItem from "../components/contactsItem";
 import { BiLogoGmail, BiLogoLinkedin, BiLogoGithub } from "react-icons/bi";
+import ContactsItem from "../components/contactsItem";
 
 function Contacts() {
   const contactsList = [
     {
-      icon: <BiLogoGmail size={25} aria-hidden="true" />,
+      icon: <BiLogoGmail size={25} aria-label="true" />,
       link: "mailto:victor.francelino10@gmail.com",
       ariaLabel: "Enviar um email para Victor Francelino.",
       contactName: "E-mail",
       contactUser: "victor.francelino10@gmail.com",
     },
     {
-      icon: <BiLogoLinkedin size={25} aria-hidden="true" />,
+      icon: <BiLogoLinkedin size={25} aria-label="true" />,
       link: "https://www.linkedin.com/in/victorfrancelino",
       ariaLabel: "LinkedIn de Victor Francelino",
       contactName: "LinkedIn",
       contactUser: "@victorfrancelino",
     },
     {
-      icon: <BiLogoGithub size={25} aria-hidden="true" />,
+      icon: <BiLogoGithub size={25} aria-label="true" />,
       link: "https://github.com/VictorFrancelino",
       ariaLabel: "GitHub de Victor Francelino",
       contactName: "GitHub",
