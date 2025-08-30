@@ -1,8 +1,18 @@
-import { BiLogoGmail, BiLogoLinkedin, BiLogoGithub } from "react-icons/bi";
+import {
+  BiLogoWhatsapp,
+  BiLogoGmail,
+  BiLogoLinkedin,
+  BiLogoGithub,
+} from "react-icons/bi";
 import heroImage from "../assets/imgs/hero.jpg";
 import GlitchButton from "../components/glitchButton";
 
 const iconsList = [
+  {
+    icon: <BiLogoWhatsapp size={25} aria-label="true" />,
+    link: "https://wa.me/5592985896942",
+    ariaLabel: "Enviar uma mensagem no WhatsApp de Victor Francelino.",
+  },
   {
     icon: <BiLogoGmail size={25} aria-label="true" />,
     link: "mailto:victor.francelino10@gmail.com",
