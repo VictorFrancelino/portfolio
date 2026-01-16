@@ -9,108 +9,62 @@ import {
   BiLogoReact,
   BiLogoGit,
   BiLogoGithub,
+  BiLogoNodejs,
 } from "react-icons/bi";
 import { PiFigmaLogoLight } from "react-icons/pi";
-import { SiAstro } from "react-icons/si";
+import { SiAstro, SiJest } from "react-icons/si";
+import { IoCodeSlash } from "react-icons/io5";
 
 function AboutMe() {
-  const techsList = [
-    {
-      icon: <BiLogoHtml5 aria-label="true" />,
-      text: "HTML5",
-    },
-    {
-      icon: <BiLogoCss3 aria-label="true" />,
-      text: "CSS3",
-    },
-    {
-      icon: <BiLogoBootstrap aria-label="true" />,
-      text: "Bootstrap",
-    },
-    {
-      icon: <BiLogoTailwindCss aria-label="true" />,
-      text: "Tailwind",
-    },
-    {
-      icon: <BiLogoJavascript aria-label="true" />,
-      text: "JavaScript",
-    },
-    {
-      icon: <BiLogoTypescript aria-label="true" />,
-      text: "TypeScript",
-    },
-    {
-      icon: <BiLogoReact aria-label="true" />,
-      text: "React",
-    },
-    {
-      icon: <SiAstro aria-label="true" />,
-      text: "Astro",
-    },
-    {
-      icon: <BiLogoGit aria-label="true" />,
-      text: "Git",
-    },
-    {
-      icon: <BiLogoGithub aria-label="true" />,
-      text: "GitHub",
-    },
-    {
-      icon: <PiFigmaLogoLight aria-label="true" />,
-      text: "Figma",
-    },
-  ];
+  const stacks = {
+    frontend: [
+      { icon: <BiLogoHtml5 />, text: "HTML5" },
+      { icon: <BiLogoCss3 />, text: "CSS3" },
+      { icon: <BiLogoReact />, text: "React" },
+      { icon: <SiAstro />, text: "Astro" },
+      { icon: <BiLogoTailwindCss />, text: "Tailwind" },
+      { icon: <BiLogoBootstrap />, text: "Bootstrap" },
+    ],
+    core: [
+      { icon: <BiLogoJavascript />, text: "JavaScript" },
+      { icon: <BiLogoTypescript />, text: "TypeScript" },
+      { icon: <BiLogoNodejs />, text: "Node.js" },
+      { icon: <IoCodeSlash />, text: "Compiladores" },
+    ],
+    tools: [
+      { icon: <SiJest />, text: "Jest" },
+      { icon: <BiLogoGit />, text: "Git" },
+      { icon: <BiLogoGithub />, text: "GitHub" },
+      { icon: <PiFigmaLogoLight />, text: "Figma" },
+    ],
+  };
+
+  const renderTechCategory = (title, list) => (
+    <div className="w-full flex flex-col items-center gap-6 mb-8 last:mb-0">
+      <h3 className="text-xl text-pink font-bold border-b-2 border-pink pb-2 px-8">
+        {title}
+      </h3>
+      <div className="w-full grid grid-cols-3 md:grid-cols-4 gap-8 md:gap-12 justify-items-center">
+        {list.map((item, index) => (
+          <Tech key={index} icon={item.icon} text={item.text} />
+        ))}
+      </div>
+    </div>
+  );
 
   return (
-    <section
-      className="
-        w-full
-        flex flex-col 
-        justify-between items-center 
-        px-5 md:px-10 xl:px-15 2xl:px-20
-        py-5 md:pb-10 xl:py-10
-        space-y-5
-      "
-    >
-      <div
-        className="
-          w-full 
-          flex flex-col
-          items-center
-          space-y-5
-        "
-      >
+    <section className="w-full flex flex-col items-center px-5 md:px-10 xl:px-20 py-10 space-y-16">
+      <div className="w-full max-w-4xl flex flex-col items-center space-y-6">
         <h2 className="text-2xl">Sobre mim</h2>
-        <p className="text-justify text-lg indent-4">
-          Iniciei minha jornada na programação em 2020, desde então, adquiri
-          bastante conhecimento em diversas tecnologias de Front-End, como{" "}
-          <span>HTML5</span>, <span>CSS3</span>, <span>Bootstrap</span>,{" "}
-          <span>TailwindCSS</span>, <span>JavaScript</span> e <span>React</span>
-          , além de habilidades com as ferramentas <span>Git</span> e{" "}
-          <span>GitHub</span>, conhecimentos em <span>UI/UX Design</span> e{" "}
-          <span>Figma</span>. Atualmente, estou me aprofundando ainda mais em{" "}
-          <span>React</span> e <span>TailwindCSS</span>, criando interfaces
-          modernas e responsivas, e também focado no estudo em{" "}
-          <span>Astro</span>, <span>TypeScript</span> e na criação de API’s
-          usando <span>NodeJS</span>. Meu objetivo é me tornar um desenvolvedor
-          diferenciado, com disposição para enfrentar diversos desafios ao longo
-          da minha carreira, para que, cada vez mais, eu evolua como
-          desenvolvedor e me torne um profissional diferenciado e disputado no
-          mercado. No momento, busco a primeira oportunidade de estágio na área
-          de desenvolvimento Front-End.
+        <p className="text-justify text-lg indent-6">
+          Iniciei minha jornada na programação em 2020 e, desde então, venho evoluindo do desenvolvimento visual para uma compreensão mais profunda da engenharia de software. Construí uma base sólida em tecnologias Front-End como <span>HTML5, CSS3, JavaScript</span> e <span>React</span>, além de integrar conhecimentos de <span>UI/UX Design</span> e <span>Figma</span> para criar interfaces modernas e responsivas. Atualmente, estou expandindo meus horizontes técnicos ao me aprofundar em <span>TypeScript</span>, <span>Astro</span> e na construção de APIs com <span>Node.js</span>. Minha trajetória é marcada por desafios práticos: no projeto <span>Delégua</span>, venho ganhando maturidade ao lidar com um sistema de grande escala e testes automatizados com <span>Jest</span>. Já com o <span>SimpleScript</span>, estou explorando os fundamentos da computação, compreendendo o funcionamento de interpretadores e a lógica de linguagens de baixo nível. Sou um desenvolvedor motivado por desafios e em constante aprendizado, buscando minha primeira oportunidade de estágio para aplicar essa visão analítica e técnica na criação de produtos de alta performance.
         </p>
       </div>
 
-      <div
-        className="
-          w-full
-          flex flex-wrap
-          justify-between
-        "
-      >
-        {techsList.map((item, index) => (
-          <Tech key={index} icon={item.icon} text={item.text} />
-        ))}
+      <div className="w-full max-w-4xl flex flex-col items-center">
+        {renderTechCategory("Frontend & UI", stacks.frontend)}
+        {renderTechCategory("Core & Backend", stacks.core)}
+        {renderTechCategory("Ferramentas & QA", stacks.tools)}
       </div>
     </section>
   );

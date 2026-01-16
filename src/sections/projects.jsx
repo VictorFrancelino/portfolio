@@ -1,10 +1,34 @@
 import Card from "../components/card/index";
-import { SiAstro, SiShadcnui, SiTypescript } from "react-icons/si";
+import { SiAstro, SiShadcnui, SiTypescript, SiJest } from "react-icons/si";
+import { IoCodeSlash } from "react-icons/io5";
 import { RiTailwindCssFill, RiGeminiFill } from "react-icons/ri";
 import { FaReact } from "react-icons/fa";
 
 function Projects() {
   const projectsList = [
+    {
+      title: "Delégua",
+      description:
+        "Colaboração em um projeto de código aberto de grande escala da linguagem de programação Delégua. Focado na implementação de novas funcionalidades para a linguagem, além de testes automatizados utilizando Jest, garantindo a estabilidade da linguagem e aprendendo a navegar em arquiteturas complexas e bases de código extensas.",
+      repoLink: "https://github.com/DesignLiquido/delegua",
+      projectLink: null,
+      alt: "",
+      techs: [
+        { icon: <SiJest aria-label="true" />, text: "Jest" },
+        { icon: <SiTypescript aria-label="true" />, text: "TypeScript" },
+      ],
+    },
+    {
+      title: "SimpleScript",
+      description:
+        "Desenvolvimento de uma linguagem de programação. O projeto envolve a criação de um interpretador, lógica de baixo nível e a integração de módulos de visão computacional, proporcionando um entendimento profundo de como o hardware e o software se comunicam.",
+      repoLink: "https://github.com/VictorFrancelino/simplescript",
+      projectLink: null,
+      alt: "",
+      techs: [
+        { icon: <IoCodeSlash aria-label="true" />, text: "Compiladores" },
+      ],
+    },
     {
       title: "Duardo Editor",
       description:
@@ -54,8 +78,8 @@ function Projects() {
       id="projects"
       className="
         w-full
-        flex flex-col 
-        justify-center items-center 
+        flex flex-col
+        justify-center items-center
         p-5
         py-5 md:pb-10 xl:py-10
         space-y-5

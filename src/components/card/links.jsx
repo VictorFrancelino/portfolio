@@ -11,11 +11,13 @@ const Links = ({ repoLink, projectLink }) => {
           ariaLabel={"Visitar repositório desse projeto no GitHub."}
         />
       ) : null}
-      <GlitchButton
-        icon={<LuSquareArrowOutUpRight />}
-        href={projectLink}
-        ariaLabel={"Visitar o site desse projeto."}
-      />
+      {projectLink ? (
+        <GlitchButton
+          icon={<LuSquareArrowOutUpRight />}
+          href={projectLink}
+          ariaLabel={"Visitar o site desse projeto."}
+        />
+      ) : null}
     </div>
   );
 };

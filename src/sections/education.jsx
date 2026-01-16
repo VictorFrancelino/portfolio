@@ -6,8 +6,8 @@ function Education() {
     <section
       id="education"
       className="
-        w-full 
-        flex flex-col 
+        w-full
+        flex flex-col
         justify-center items-center
         p-5
         py-5 md:pb-10 xl:py-10
@@ -22,6 +22,7 @@ function Education() {
             title={item.title}
             showDate={true}
             date={item.date}
+            completed={item.completed}
             description={item.description}
           />
         ))}
